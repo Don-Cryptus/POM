@@ -31,7 +31,6 @@ class LoginPage(BasePage):
     def switch_window(self, x):
         self.driver.switch_to.window(self.driver.window_handles[x])
 
-
     def login(self):
         if self.user["provider"] == "google":
             self.login_google()

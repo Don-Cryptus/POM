@@ -4,6 +4,7 @@ from utils import users
 from utils.locators import *
 
 
+
 class MainPage(BasePage):
     def __init__(self, driver):
         print("user_page __init__")
@@ -33,13 +34,14 @@ class MainPage(BasePage):
 
     def switch_to_iframe(self):
         self.iframe = self.find_element(*self.locator.IFRAME)
-        self.switch_iframe(self.iframe)
+        self.iframe2 = self.switch_iframe(self.iframe)
 
     def login_click(self):
-        self.change_language()
+        # self.change_language()
         self.click_sign_in_button()
         self.switch_to_iframe()
 
+        #self.google_login_button = self.check_element(*self.locator.GOOGLE_LOGIN)
         if self.user["provider"] == "google":
             self.click_google_login_button()
         elif self.user["provider"] == "facebook":

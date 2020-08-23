@@ -1,6 +1,6 @@
 from tests.base_test import BaseTest
 from pages.main_page import MainPage
-
+#https://github.com/smirad91/SeleniumCursor
 
 class TestSignInPage(BaseTest):
 

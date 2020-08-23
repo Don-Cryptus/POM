@@ -9,8 +9,9 @@ class BaseTest(unittest.TestCase):
         print("start")
         self.driver = uc.Chrome()
         #self.driver = webdriver.Chrome()
+        self.driver.get("https://google.com")
         self.driver.get("https://soundcloud.com/discover")
-        self.driver.set_window_position(3000,100)
+        #self.driver.set_window_position(0,0)
 
     def tearDown(self):
         self.driver.close()
