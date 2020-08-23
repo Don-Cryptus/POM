@@ -1,0 +1,3 @@
+git+https://github.com/smirad91/SeleniumCursor
+git+https://github.com/patrikoss/pyclick
+git+https://github.com/ultrafunkamsterdam/undetected-chromedriver.git
