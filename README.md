@@ -1,4 +1,4 @@
-# pyclick
+# Page Object Model
 Soundcloud login
 
 ### Simple Example:
