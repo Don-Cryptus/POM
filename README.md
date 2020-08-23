@@ -2,6 +2,11 @@
 Soundcloud login
 
 ### Simple Example:
+to download project
+```
+git clone https://github.com/Don-Cryptus/POM/
+cd .\POM\
+```
 To install libraries
 ```
 pip install -r requirements.txt
