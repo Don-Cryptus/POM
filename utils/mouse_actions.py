@@ -90,9 +90,7 @@ def _is_horizontal_scroll_on_screen(driver):
     horizontal_scroll = False
     scroll_width = driver.execute_script("return document.getElementsByTagName('html')[0].scrollWidth")
     inner_width = driver.execute_script("return window.innerWidth")
-    print("check horisontal scrollbar...")
     if int(inner_width) < int(scroll_width):
-        print("horisontal scrollbar exist")
         horizontal_scroll = True
     return horizontal_scroll
 
@@ -107,8 +105,6 @@ def _is_vertical_scroll_on_screen(driver):
     vertical_scroll = False
     scroll_height = driver.execute_script("return document.getElementsByTagName('html')[0].scrollHeight")
     inner_height = driver.execute_script("return window.innerHeight")
-    print("check vertical scrollbar...")
     if int(scroll_height) > int(inner_height):
-        print("vertical scrollbar exist")
         vertical_scroll = True
     return vertical_scroll
