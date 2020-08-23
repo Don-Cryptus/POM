@@ -3,10 +3,8 @@ import random
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import TimeoutException,NoSuchElementException
-
-#pip install git+https://github.com/smirad91/SeleniumCursor
 from selenium_move_cursor.MouseActions import move_to_element_chrome
-
+from utils.mouse_actions import *
 # this Base class is serving basic attributes for every single page inherited from Page class from utils import
 
 

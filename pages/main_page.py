@@ -4,9 +4,8 @@ from utils import users
 from utils.locators import *
 
 
-
 class MainPage(BasePage):
-    def __init__(self, driver):
+    def __init__(self,driver):
         print("user_page __init__")
         self.locator = MainPageLocators
         self.user = users.get_user("google")
@@ -41,7 +40,7 @@ class MainPage(BasePage):
         self.click_sign_in_button()
         self.switch_to_iframe()
 
-        #self.google_login_button = self.check_element(*self.locator.GOOGLE_LOGIN)
+        # self.google_login_button = self.check_element(*self.locator.GOOGLE_LOGIN)
         if self.user["provider"] == "google":
             self.click_google_login_button()
         elif self.user["provider"] == "facebook":
@@ -50,7 +49,6 @@ class MainPage(BasePage):
             self.click_apple_login_button()
 
         if self.check_element(*self.locator.VALIDATION_CONTINUE):
-            LoginPage(self.driver, self.user).age_gender_verification()
+            LoginPage(self.driver,self.user).age_gender_verification()
         else:
-            return LoginPage(self.driver, self.user)
-
+            return LoginPage(self.driver,self.user)
