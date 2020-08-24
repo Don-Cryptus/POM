@@ -3,15 +3,10 @@ import random
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import TimeoutException,NoSuchElementException
-from selenium_move_cursor.MouseActions import move_to_element_chrome
-from utils.mouse_actions import *
-# this Base class is serving basic attributes for every single page inherited from Page class from utils import
-
-
+from utils import mouse_actions
 
 class BasePage(object):
     def __init__(self,driver,base_url='https://soundcloud.com/'):
-        print("base_page __init__")
         self.base_url = base_url
         self.driver = driver
         # self.driver.get(base_url)
@@ -40,11 +35,14 @@ class BasePage(object):
     def hover(self,*locator):
         time.sleep(random.uniform(1.00,2.00))
         element = self.find_element(*locator)
+
+        #real mouse click
+        mouse_actions.move_to_element_chrome(self.driver, element, display_scaling=100, chrome_info_bar_shown=False)
+
+        #virtual mouse click
         # hover = ActionChains(self.driver).move_to_element(element)
         # hover.click(on_element=element)
         # hover.perform()
-        move_to_element_chrome(self.driver, element, display_scaling=100, chrome_info_bar_shown=False)
-        # element.click()
 
     def switch_iframe(self,element):
         self.driver.switch_to.frame(element)

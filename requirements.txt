@@ -1,2 +1,3 @@
 git+https://github.com/patrikoss/pyclick.git
 git+https://github.com/ultrafunkamsterdam/undetected-chromedriver.git
+pywin32
